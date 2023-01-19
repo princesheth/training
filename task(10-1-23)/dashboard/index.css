@@ -1,0 +1,484 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+
+body {
+  height: 100vh;
+  background-color: #eeeeee;
+}
+
+a {
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #1f7a54;
+}
+
+.navbar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)), url("img/header pattern svg.svg");
+  border-bottom: 2px solid #31b9e4;
+}
+.navbar li {
+  list-style-type: none;
+  display: flex;
+}
+
+.logo {
+  padding: 10.5px 0px 9.5px 24px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 18px;
+  color: #3fd28b;
+}
+nav .active {
+  height: 56px;
+  align-items: center;
+  margin-left: auto;
+  color: #ffffff;
+  border-bottom: 4px solid #ffffff;
+}
+
+.item {
+  margin-right: 32px;
+  border-bottom: 4px solid transparent;
+}
+
+.badge {
+  border-radius: 100%;
+  height: 12px;
+  width: 12px;
+  background-color: #2a7ff3;
+  font-size: 10px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  top: -2px;
+  float: right;
+  right: 7px;
+}
+
+#alert {
+  margin-right: 25px;
+}
+#alert img {
+  width: 21px;
+  height: 24px;
+}
+
+#anounce {
+  margin-right: 21px;
+}
+#anounce img {
+  width: 20px;
+  height: 20px;
+}
+
+#account {
+  margin-right: 21px;
+}
+#account img {
+  width: 32px;
+  height: 32px;
+}
+#account .badge {
+  background-color: #ffffff;
+  color: #222222;
+  font-size: 8px;
+}
+
+.container {
+  margin: 24px 24px 33px 24px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #8ddc97;
+  height: 64px;
+  margin-bottom: 24px;
+}
+.top-nav .active {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-bottom: 4px solid #222222;
+}
+.top-nav p {
+  display: flex;
+  align-items: center;
+}
+.top-nav p span {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.course {
+  height: 32px;
+  width: 21px;
+  background-image: url("img/courses.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 8px;
+}
+
+.class {
+  height: 32px;
+  width: 29px;
+  background-image: url("img/classes.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 8px;
+}
+
+.spec {
+  display: flex;
+  margin-bottom: 17px;
+}
+
+.spec > div {
+  display: flex;
+  height: 28px;
+  color: #686868;
+  align-items: flex-end;
+}
+
+.sort {
+  margin-left: auto;
+}
+.sort label {
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: 6px;
+}
+.sort select {
+  color: #333333;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  background-color: #eeeeee;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-right: 54px;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select + img {
+  width: 17px;
+  height: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  margin-right: 24px;
+}
+
+select + img + img {
+  width: 12px;
+}
+
+div hr {
+  color: #000000;
+  opacity: 0.12;
+  margin-bottom: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 25px;
+}
+.cards hr {
+  margin-bottom: 15px;
+}
+
+.card {
+  width: 476px;
+  height: 246px;
+  background-color: #ffffff;
+}
+
+.card > div {
+  padding: 24px 16px 9px 24px;
+}
+
+.left img {
+  width: 132px;
+  height: 157px;
+  margin-right: 16px;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+.right p {
+  display: flex;
+}
+
+.fs-16 {
+  font-size: 16px;
+  line-height: 20px;
+  color: #222222;
+}
+
+.name {
+  margin-bottom: 7px;
+  width: 270px;
+}
+.name img {
+  height: 24px;
+  width: 20px;
+  margin-left: auto;
+}
+
+.subject {
+  font-size: 12px;
+  line-height: 16px;
+  color: #666666;
+  margin-bottom: 7px;
+}
+
+.vr {
+  color: #000000;
+  opacity: 0.32;
+  margin-left: 9px;
+  margin-right: 8px;
+}
+
+.green {
+  color: #1f7a54;
+  margin-left: 2px;
+}
+
+.units {
+  font-size: 12px;
+  line-height: 16px;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.bold {
+  font-weight: 700;
+  color: #222222;
+}
+
+.division {
+  margin-bottom: 8px;
+}
+.division select {
+  color: #222222;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+  padding-right: 115px;
+}
+.division img {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+  cursor: pointer;
+}
+
+.strength {
+  color: #666666;
+  font-size: 12px;
+  line-height: 16px;
+}
+.strength span {
+  color: #000000;
+  opacity: 0.12;
+  margin: 0px 8px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottom img {
+  cursor: pointer;
+}
+
+.img-1 {
+  height: 24px;
+  width: 22px;
+  background-image: url("img/preview.svg");
+}
+
+.img-2 {
+  width: 18px;
+  height: 20px;
+  background-image: url("img/manage course.svg");
+}
+
+.img-3 {
+  width: 18px;
+  height: 20px;
+  background-image: url("img/grade submissions.svg");
+}
+
+.img-4 {
+  height: 24px;
+  width: 20px;
+  background-image: url("img/reports.svg");
+}
+
+.card-1 {
+  grid-column: 1/2;
+}
+
+.card-2 {
+  grid-column: 2/3;
+}
+.card-2 .name {
+  margin-bottom: 10px;
+}
+.card-2 select {
+  color: rgba(34, 34, 34, 0.3764705882);
+  padding-right: 172px;
+}
+.card-2 .img-2 {
+  opacity: 0.4;
+}
+.card-2 .img-3 {
+  opacity: 0.4;
+}
+
+.card-3 {
+  grid-column: 1/2;
+}
+.card-3 select {
+  padding-right: 175px;
+}
+
+.card-4 {
+  grid-column: 2/-1;
+}
+.card-4 .subject {
+  margin-bottom: 17px;
+}
+.card-4 .name img {
+  filter: grayscale(100%);
+}
+
+.abt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.abt span {
+  padding: 0px 9px;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #e0e1e1;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: #616161;
+  padding: 8px 0px;
+}
+.footer pre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer img {
+  padding-right: 15px;
+}
+.footer span {
+  padding-right: 16px;
+}
+
+#tab {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 24px;
+  }
+  .card-1 {
+    grid-column: 1/2;
+  }
+  .card-1 select {
+    padding-right: 226px;
+  }
+  .card-2 {
+    grid-column: 1/2;
+  }
+  .card-2 select {
+    padding-right: 283px;
+  }
+  .card-3 {
+    grid-column: 1/2;
+  }
+  .card-3 select {
+    padding-right: 286px;
+  }
+  .card-4 {
+    grid-column: 1/-1;
+  }
+  .card-4 select {
+    padding-right: 226px;
+  }
+  .name {
+    width: 375px;
+  }
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 571px;
+    height: 246px;
+    background-color: #ffffff;
+  }
+  #lap {
+    display: none;
+  }
+  #tab {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .card {
+    width: 696px;
+  }
+  .name {
+    width: 470px;
+  }
+  .card-1 select {
+    padding-right: 326px;
+  }
+  .card-2 select {
+    padding-right: 383px;
+  }
+  .card-3 select {
+    padding-right: 386px;
+  }
+  .card-4 select {
+    padding-right: 326px;
+  }
+}/*# sourceMappingURL=index.css.map */

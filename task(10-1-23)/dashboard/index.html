@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2f26d88f13.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <li class="logo"><img src="img/logo used in header.svg" alt="" width="134px" height="36px"></li>
+            <li class="active item">DASHBOARD</li>
+            <li class="item">CONTENT</li>
+            <li class="item">USERS</li>
+            <li class="item">REPORTS</li>
+            <li class="item">ADMIN</li>
+            <li class="icon" id="alert"><img src="img/alerts.svg"  alt=""><span class="badge">2</span></li>
+            <li class="icon" id="anounce"><img src="img/announcements.svg" alt=""><span class="badge">1</span></li>
+            <li class="icon" id="account"><img src="img/account_circle.svg"  alt=""><span class="badge">T</span></li>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="top-nav">
+            <div class="active">
+                <p><span class="course"></span> <span>4</span> Courses</p>
+            </div>
+            <div>
+                <p><span class="class"></span> <span>4</span> Classes</p>
+            </div>
+        </div>
+        <div class="spec">
+            <div>
+                <p>Showing 4 of 4 courses</p>
+            </div>
+            <div class="sort">
+                <label for="sort">Sort By:</label>
+                <select name="course">
+                    <option value="Course Name">Course Name</option>
+                </select>
+                <img src="img/arrow-down.svg" alt="">
+                <img src="img/sort.svg" alt="">
+            </div>
+        </div>
+        <div class="line">
+            <hr>
+        </div>
+        <div class="cards">
+            <div class="card card-1">
+                <div>
+                    <div class="top">
+                        <div class="left"><img src="img/imageMask-1.svg" alt=""></div>
+                        <div class="right">
+                            <p class="fs-16 name">Acceleration <img src="img/favourite.svg"></p>
+                            <p class="subject">Physics <span class="vr">|</span> Grade 7 <span class="green">+2</span></p>
+                            <p class="units"><span class="bold">4&nbsp;</span>Units&nbsp;<span class="bold">18&nbsp;</span> Lessons&nbsp; <span class="bold">24&nbsp;</span> Topics</p>
+                            <p class="division"><select name="sel" >
+                                <option value="Mr. Frank's Class B">Mr. Frank's Class B</option>
+                            </select><img src="img/arrow-down.svg" alt=""></p>
+                            <p class="strength">50 Students <span>|</span> 21-Jan-2020 - 21-Aug-2020</p>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="bottom">
+                        <div class="img-1"></div>
+                        <div class="img-2"></div>
+                        <div class="img-3"></div>
+                        <div class="img-4"></div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card card-2">
+                <div>
+                    <div class="top">
+                        <div class="left"><img src="img/imageMask-2.svg" alt=""></div>
+                        <div class="right">
+                            <p class="fs-16 name">Displacement, Velocity and Speed<img src="img/favourite.svg"></p>
+                            <p class="subject">Physics 2<span class="vr">|</span> Grade 6 <span class="green">+3</span></p>
+                            <p class="units"><span class="bold">2&nbsp;</span>Units&nbsp;<span class="bold">15&nbsp;</span> Lessons&nbsp; <span class="bold">20&nbsp;</span> Topics</p>
+                            <p class="division"><select name="sel" >
+                                <option value="No classes">No Classes</option>
+                            </select><img src="img/arrow-down.svg" alt=""></p>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="bottom">
+                        <div class="img-1"></div>
+                        <div class="img-2"></div>
+                        <div class="img-3"></div>
+                        <div class="img-4"></div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="card card-3">
+                <div>
+                    <div class="top">
+                        <div class="left"><img src="img/imageMask.svg" alt=""></div>
+                        <div class="right">
+                            <p class="fs-16 name" id="lap">Introduction to Biology: Micro organisms and how they affec... <img src="img/favourite.svg"></p>
+                            <p class="fs-16 name" id="tab">Introduction to Biology: Micro organisms and how they affect the other Life Systems in En... <img src="img/favourite.svg"></p>
+                            <p class="subject">Biology <span class="vr">|</span> Grade 4 <span class="green">+1</span></p>
+                            <p class="units"><span class="bold">5&nbsp;</span>Units&nbsp;<span class="bold">16&nbsp;</span> Lessons&nbsp; <span class="bold">22&nbsp;</span> Topics</p>
+                            <p class="division"><select name="sel" >
+                                <option value="All Classes">All Classes</option>
+                            </select><img src="img/arrow-down.svg" alt=""></p>
+                            <p class="strength">300 Students</p>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="bottom">
+                        <div class="img-1"></div>
+                        <div class="img-2"></div>
+                        <div class="img-3"></div>
+                        <div class="img-4"></div>
+                    </div>
+                </div>
+            </div>
+     
+            <div class="card card-4">
+                <div>
+                    <div class="top">
+                        <div class="left"><img src="img/imageMask-3.svg" alt=""></div>
+                        <div class="right">
+                            <p class="fs-16 name">Introduction to High School Mathematics <img src="img/favourite.svg"></p>
+                            <p class="subject">Mathematics <span class="vr">|</span> Grade 8 <span class="green">+3</span></p>
+                            <p class="division"><select name="sel" >
+                                <option value="Mr. Frank's Class A">Mr. Frank's Class A</option>
+                            </select><img src="img/arrow-down.svg" alt=""></p>
+                            <p class="strength">44 Students <span>|</span> 14-Oct-2019 - 20-Oct-2020</p>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="bottom">
+                        <div class="img-1"></div>
+                        <div class="img-2"></div>
+                        <div class="img-3"></div>
+                        <div class="img-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="abt">
+        <a href="#">About</a> <span>|</span> <a href="#">Contact Us</a>
+    </div>
+    <div class="footer">
+        <pre><img src="img/logo used in footer.svg" alt="">  <span>|</span>Copyright &copy; 2020-2021 <b> Zeus Systems Pvt. Ltd. </b> All rights reserved</pre>
+    </div>
+</body>
+</html>
