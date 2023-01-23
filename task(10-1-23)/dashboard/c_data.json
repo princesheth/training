@@ -19,7 +19,7 @@
         "img":"img/imageMask.svg",
         "name":"Introduction to Biology: Micro organisms and how they affec... <img src=\"img/favourite.svg\">",
         "subject":"Biology <span class=\"vr\">|</span> Grade 4 <span class=\"green\">+1</span>",
-        "units":"><span class=\"bold\">5&nbsp;</span>Units&nbsp;<span class=\"bold\">16&nbsp;</span> Lessons&nbsp; <span class=\"bold\">22&nbsp;</span> Topics",
+        "units":"<span class=\"bold\">5&nbsp;</span>Units&nbsp;<span class=\"bold\">16&nbsp;</span> Lessons&nbsp; <span class=\"bold\">22&nbsp;</span> Topics",
         "division":"<select name=\"sel\" ><option value=\"All Classes\">All Classes</option></select><img src=\"img/arrow-down.svg\" alt=\"\">",
         "strength":"300 Students"
     },
@@ -27,7 +27,7 @@
         "img":"img/imageMask-3.svg",
         "name":"Introduction to High School Mathematics <img src=\"img/favourite.svg\">",
         "subject":"Mathematics <span class=\"vr\">|</span> Grade 8 <span class=\"green\">+3</span>",
-        "units":"><span class=\"bold\">5&nbsp;</span>Units&nbsp;<span class=\"bold\">16&nbsp;</span> Lessons&nbsp; <span class=\"bold\">22&nbsp;</span> Topics",
+        "units":"",
         "division":"<select name=\"sel\" ><option value=\"Mr. Frank's Class A\">Mr. Frank's Class A</option></select><img src=\"img/arrow-down.svg\" alt=\"\">",
         "strength":"44 Students <span>|</span> 14-Oct-2019 - 20-Oct-2020"
     }
