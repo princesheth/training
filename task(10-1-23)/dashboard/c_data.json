@@ -1,35 +1,92 @@
 {
     "cards":[{
         "img":"img/imageMask-1.svg",
-        "name":"Acceleration <img src=\"img/favourite.svg\">",
-        "subject":"Physics <span class=\"vr\">|</span> Grade 7 <span class=\"green\">+2</span>",
-        "units":"<span class=\"bold\">4&nbsp;</span>Units&nbsp;<span class=\"bold\">18&nbsp;</span> Lessons&nbsp; <span class=\"bold\">24&nbsp;</span> Topics",
-        "division":"<select name=\"sel\" ><option value=\"Mr. Frank's Class B\">Mr. Frank's Class B</option></select><img src=\"img/arrow-down.svg\" alt=\"\">",
-        "strength":"50 Students <span>|</span> 21-Jan-2020 - 21-Aug-2020"
+        "name":{
+            "text":"Acceleration",
+            "img":"img/favourite.svg"
+            },
+        "subject":{
+            "text":"Physics ",
+            "text2":" Grade 7 ",
+            "span":"+2"
+        },
+        "units":{
+            "unit":"4&nbsp;",
+            "lesson":"18&nbsp;",
+            "topic":"24&nbsp;"
+        },
+        "division":{
+            "value":"Mr. Frank's Class B"
+        },
+        "strength":{
+            "num":"50 Students ",
+            "date":" 21-Jan-2020 - 21-Aug-2020"
+        }
     },
     {
         "img":"img/imageMask-2.svg",
-        "name":"Displacement, Velocity and Speed<img src=\"img/favourite.svg\">",
-        "subject":"Physics 2<span class=\"vr\">|</span> Grade 6 <span class=\"green\">+3</span>",
-        "units":"<span class=\"bold\">2&nbsp;</span>Units&nbsp;<span class=\"bold\">15&nbsp;</span> Lessons&nbsp; <span class=\"bold\">20&nbsp;</span> Topics",
-        "division":"<select name=\"sel\" ><option value=\"No classes\">No Classes</option></select><img src=\"img/arrow-down.svg\" alt=\"\">",
+        "name":{
+            "text":"Displacement, Velocity and Speed",
+            "img":"img/favourite.svg"
+        },
+        "subject":{
+            "text":"Physics 2",
+            "text2":" Grade 6 ",
+            "span":"+3"
+        },
+        "units":{
+            "unit":"2&nbsp;",
+            "lesson":"15&nbsp;",
+            "topic":"20&nbsp;"
+        },
+        "division":{
+            "value":"No Classes"
+        },
         "strength":""
     },
     {
         "img":"img/imageMask.svg",
-        "name":"Introduction to Biology: Micro organisms and how they affec... <img src=\"img/favourite.svg\">",
-        "subject":"Biology <span class=\"vr\">|</span> Grade 4 <span class=\"green\">+1</span>",
-        "units":"<span class=\"bold\">5&nbsp;</span>Units&nbsp;<span class=\"bold\">16&nbsp;</span> Lessons&nbsp; <span class=\"bold\">22&nbsp;</span> Topics",
-        "division":"<select name=\"sel\" ><option value=\"All Classes\">All Classes</option></select><img src=\"img/arrow-down.svg\" alt=\"\">",
-        "strength":"300 Students"
+        "name":{
+            "text":"Introduction to Biology: Micro organisms and how they affec... ",
+            "img":"img/favourite.svg"
+        },
+        "subject":{
+            "text":"Biology ",
+            "text2":" Grade 4 ",
+            "span":"+1"
+        },
+        "units":{
+            "unit":"5&nbsp;",
+            "lesson":"16&nbsp;",
+            "topic":"22&nbsp;"
+        },
+        "division":{
+            "value":"All Classes"
+        },
+        "strength":{
+            "num":"300 Students ",
+            "date":""
+        }
     },
     {
         "img":"img/imageMask-3.svg",
-        "name":"Introduction to High School Mathematics <img src=\"img/favourite.svg\">",
-        "subject":"Mathematics <span class=\"vr\">|</span> Grade 8 <span class=\"green\">+3</span>",
+        "name":{
+            "text":"Introduction to High School Mathematics ",
+            "img":"img/favourite.svg"
+        },
+        "subject":{
+            "text":"Mathematics ",
+            "text2":" Grade 8 ",
+            "span":"+3"
+        },
         "units":"",
-        "division":"<select name=\"sel\" ><option value=\"Mr. Frank's Class A\">Mr. Frank's Class A</option></select><img src=\"img/arrow-down.svg\" alt=\"\">",
-        "strength":"44 Students <span>|</span> 14-Oct-2019 - 20-Oct-2020"
+        "division":{
+            "value":"Mr. Frank's Class A"
+        },
+        "strength":{
+            "num":"44 Students ",
+            "date":" 14-Oct-2019 - 20-Oct-2020"
+        }
     }
     ]
 }

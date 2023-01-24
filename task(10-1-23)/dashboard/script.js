@@ -12,11 +12,11 @@ myfunc = async () => {
         <div class="top">
             <div class="left"><img src="${card.img}" alt=""></div>
             <div class="right">
-                <p class="fs-16 name">${card.name}</p>
-                <p class="subject">${card.subject}</p>
-                ${card.units ? `<p class="units">${card.units}</p>` : ''}
-                <p class="division">${card.division}</p>
-                ${card.strength ? `<p class="strength">${card.strength}</p>` : ''}
+                <p class="fs-16 name">${card.name.text}<img src="${card.name.img}"/></p>
+                <p class="subject">${card.subject.text}<span class="vr">|</span>${card.subject.text2}<span class="green">${card.subject.span}</span></p>
+                ${card.units ? `<p class="units"><span class="bold">${card.units.unit}</span>Units&nbsp;<span class="bold">${card.units.lesson}</span> Lessons&nbsp; <span class="bold">${card.units.topic}</span> Topics</p>` : ''}
+                <p class="division"><select name="sel" ><option value="${card.division.value}">${card.division.value}</option></select><img src="img/arrow-down.svg"></p>
+                ${card.strength ? `<p class="strength">${card.strength.num}${card.strength.date ? `<span>|</span> ${card.strength.date}`:''}</p>` : ''}
                 
             </div>
         </div>
