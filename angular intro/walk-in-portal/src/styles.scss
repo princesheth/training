@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     font-weight: 500;
 }
 body{
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     font-family: Quicksand;
-    width: 100vw;
     background-color: #EEEEEE;
 }
     

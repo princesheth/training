@@ -1,1 +1,33 @@
-<p>register works!</p>
+<div class="rnav">
+    <nav>
+        <li class="back" [routerLink]="['']"><img src="../../assets/img/back.svg" alt=""></li>
+        <li>Create an account</li>
+        <li class="first"><button class="btn">Cancel</button></li>
+        <li ><button class="btn disabled">Create</button></li>
+    </nav>
+</div>
+<div class="main">
+    <div class="titles">
+        <div>
+            <div class="one num">
+                1
+            </div>
+            Personal Information
+        </div>
+        <hr>
+        <div>
+            <div class="two num">
+                2
+            </div>
+            Qualifications
+        </div>
+        <hr>
+        <div>
+            <div class="three num">
+                3
+            </div>
+            Review and Proceed
+        </div>
+    </div>
+    <app-first-step></app-first-step>
+</div>
