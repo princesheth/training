@@ -4,7 +4,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule,FormsModule} from '@angular/forms'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +29,8 @@ import { RHeaderComponent } from './register/r-header/r-header.component';
     MatStepperModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

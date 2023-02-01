@@ -17,10 +17,22 @@
             <mat-label>Email</mat-label>
             <input type="email" matInput formControlName="email" required />
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="fill" class="phone">
             <mat-label>Phone Number</mat-label>
-            <span matPrefix>+ 91 &nbsp;</span>
-            <input type="tel" matInput formControlName="phone" required>
+            <span matPrefix>+ <span class="border-bottom">91</span> &nbsp;</span>
+            <input type="tel" maxlength="10" matInput formControlName="phone" required>
+          </mat-form-field><br>
+          <input type="file" class="file" #fileInput hidden required>
+          <p class="center start" (click)="fileInput.click()"><img src="../../assets/img/Upload_black_24dp.svg" alt=""> UPLOAD RESUME</p>
+          <mat-form-field appearance="fill">
+            <mat-label>Enter Portfolio URL (if any)</mat-label>
+            <input matInput/>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Preferred Job Roles*</mat-label>
+            <p><mat-checkbox formControlName="Instructional_Designer">Instructional Designer</mat-checkbox></p>
+            <p><mat-checkbox formControlName="Software_Engineer">Software Engineer</mat-checkbox></p>
+            <p><mat-checkbox formControlName="Software_Quality_Engineer">Software Quality Engineer</mat-checkbox></p>
           </mat-form-field>
         </div>
         <div class="right">right</div>

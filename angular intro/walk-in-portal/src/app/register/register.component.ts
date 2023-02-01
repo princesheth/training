@@ -19,6 +19,9 @@ export class RegisterComponent {
     lastname: ['', Validators.required],
     email: ['', Validators.required],
     phone: ['', Validators.required],
+    Instructional_Designer: false,
+    Software_Engineer: false,
+    Software_Quality_Engineer: false,
   });
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
