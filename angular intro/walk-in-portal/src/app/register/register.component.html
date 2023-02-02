@@ -1,7 +1,7 @@
 <app-header></app-header>
 <app-r-header></app-r-header>
 <mat-stepper>
-  <mat-step [stepControl]="firstFormGroup" label="Personal Information" errorMessage="Complete your personal information">
+  <mat-step [stepControl]="firstFormGroup" label="Personal Information">
     <form [formGroup]="firstFormGroup">
       <div class="main">
         <div class="left">
@@ -20,40 +20,248 @@
           <mat-form-field appearance="fill" class="phone">
             <mat-label>Phone Number</mat-label>
             <span matPrefix>+ <span class="border-bottom">91</span> &nbsp;</span>
-            <input type="tel" maxlength="10" matInput formControlName="phone" required>
-          </mat-form-field><br>
-          <input type="file" class="file" #fileInput hidden required>
-          <p class="center start" (click)="fileInput.click()"><img src="../../assets/img/Upload_black_24dp.svg" alt=""> UPLOAD RESUME</p>
+            <input type="tel" maxlength="10" matInput formControlName="phone" required /> </mat-form-field><br />
+          <input type="file" class="file" #fileInput hidden required />
+          <p class="center start" (click)="fileInput.click()">
+            <img src="../../assets/img/Upload_black_24dp.svg" alt="" /> UPLOAD
+            RESUME
+          </p>
           <mat-form-field appearance="fill">
             <mat-label>Enter Portfolio URL (if any)</mat-label>
-            <input matInput/>
+            <input matInput />
           </mat-form-field>
-          <mat-form-field appearance="fill">
+          <div class="checkbox">
             <mat-label>Preferred Job Roles*</mat-label>
-            <p><mat-checkbox formControlName="Instructional_Designer">Instructional Designer</mat-checkbox></p>
-            <p><mat-checkbox formControlName="Software_Engineer">Software Engineer</mat-checkbox></p>
-            <p><mat-checkbox formControlName="Software_Quality_Engineer">Software Quality Engineer</mat-checkbox></p>
+            <p>
+              <mat-checkbox formControlName="Instructional_Designer">Instructional Designer</mat-checkbox>
+            </p>
+            <p>
+              <mat-checkbox formControlName="Software_Engineer">Software Engineer</mat-checkbox>
+            </p>
+            <p>
+              <mat-checkbox formControlName="Software_Quality_Engineer">Software Quality Engineer</mat-checkbox>
+            </p>
+          </div>
+          <mat-form-field appearance="fill">
+            <mat-label>If You Are Registering Via A Referral, Please Mention Full Name
+              Of The Employee Who Referred You</mat-label>
+            <input type="text" matInput formControlName="referal" />
           </mat-form-field>
+          <div class="update">
+            <p>
+              <mat-checkbox formControlName="update">Send me job related updates via mail</mat-checkbox>
+            </p>
+          </div>
         </div>
-        <div class="right">right</div>
+        <div class="right">
+          <div class="profile"></div>
+          <input type="file" class="file" accept=".png,.jpg,.jpeg,.pdf" #userp hidden required />
+          <p (click)="userp.click()">UPLOAD DISPLAY PICTURE</p>
+          <p class="instruction">Max. image size: 5 MB</p>
+        </div>
       </div>
-
       <div class="center">
         <button mat-button matStepperNext class="btn">NEXT</button>
       </div>
     </form>
   </mat-step>
-  <mat-step [stepControl]="secondFormGroup" label="Qualifications" errorMessage="Complete your Qualifications">
+  <mat-step [stepControl]="secondFormGroup" label="Qualifications">
     <form [formGroup]="secondFormGroup">
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input
-          matInput
-          formControlName="secondCtrl"
-          placeholder="Ex. 1 Main St, New York, NY"
-          required
-        />
-      </mat-form-field>
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Educational Qualifications </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="form-2">
+            <mat-form-field appearance="fill">
+              <mat-label>Aggregate Percentage</mat-label>
+              <input matInput formControlName="percentage" required /> </mat-form-field><br />
+            <mat-form-field appearance="fill">
+              <mat-label>Select an option</mat-label>
+              <mat-select required>
+                <mat-option value="2019">2019</mat-option>
+                <mat-option value="2020">2020</mat-option>
+                <mat-option value="2021">2021</mat-option>
+                <mat-option value="2022">2022</mat-option>
+                <mat-option value="2023">2023</mat-option>
+              </mat-select> </mat-form-field><br />
+            <div class="two-inp">
+              <mat-form-field appearance="fill" class="mr24">
+                <mat-label>Qualification</mat-label>
+                <mat-select required>
+                  <mat-option value="Bachelor in Technology (B.Tech)">Bachelor in Technology (B.Tech)</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>Stream</mat-label>
+                <mat-select required>
+                  <mat-option value="Information Technology">Information Technology</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill" class="mr24">
+                <mat-label>College</mat-label>
+                <mat-select required>
+                  <mat-option value="Pune Institute of Technology (PIT)">Pune Institute of Technology (PIT)</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field appearance="fill">
+                <mat-label>If others, please enter your college name</mat-label>
+                <input matInput formControlName="other" />
+              </mat-form-field>
+            </div>
+            <mat-form-field appearance="fill" class="last">
+              <mat-label>Where is your college located?</mat-label>
+              <input matInput formControlName="c_location" required />
+            </mat-form-field>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion class="per">
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title> Professional Qualifications </mat-panel-title>
+          </mat-expansion-panel-header>
+          <label class="fs12">Applicant Type*</label><br>
+          <mat-radio-group>
+            <mat-radio-button (change)="Change($event)" value="Fresher">
+              Fresher
+            </mat-radio-button>
+            <mat-radio-button (change)="Change($event)" value="Experienced">
+              Experienced
+            </mat-radio-button>
+          </mat-radio-group>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div class="fresher" *ngIf="personal == 'Fresher'">
+        <div class="checkbox">
+          <mat-label>Select All The Technologies You Are Familiar In</mat-label>
+          <p>
+            <mat-checkbox formControlName="Javascript">Javascript</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Angular_JS">Angular JS</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="React">React</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Node_JS">Node JS</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Others">Others</mat-checkbox>
+          </p>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>If others, please mention</mat-label>
+          <input matInput formControlName="other_tech"/>
+        </mat-form-field><br>
+        <label class="fs12">Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br>
+        <mat-radio-group>
+          <mat-radio-button (change)="appeared($event)" value="Yes">
+            Yes
+          </mat-radio-button>
+          <mat-radio-button (change)="appeared($event)" value="No">
+            No
+          </mat-radio-button>
+        </mat-radio-group><br>
+        <mat-form-field appearance="fill" class="last" *ngIf="appear">
+          <mat-label>If Yes, which role did you apply for?</mat-label>
+          <input matInput formControlName="role"/>
+        </mat-form-field>
+      </div>
+      <div class="experienced" *ngIf="personal == 'Experienced'">
+        <mat-form-field appearance="fill">
+          <mat-label>Years of Experience</mat-label>
+          <input matInput formControlName="experience" required/>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>Current CTC (In Rupees)</mat-label>
+          <input matInput formControlName="c_CTC" required/>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+          <mat-label>Expected CTC (In Rupees)</mat-label>
+          <input matInput formControlName="e_CTC" required/>
+        </mat-form-field><br>
+        <div class="checkbox">
+          <mat-label>Select All The Technologies You Are Expertise In*</mat-label>
+          <p>
+            <mat-checkbox formControlName="Javascript">Javascript</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Angular_JS">Angular JS</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="React">React</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Node_JS">Node JS</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Others">Others</mat-checkbox>
+          </p>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>If others, please mention</mat-label>
+          <input matInput formControlName="other_tech"/>
+        </mat-form-field><br>
+        <div class="checkbox">
+          <mat-label>Select All The Technologies You Are Familiar In</mat-label>
+          <p>
+            <mat-checkbox formControlName="Javascript">Javascript</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Angular_JS">Angular JS</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="React">React</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Node_JS">Node JS</mat-checkbox>
+          </p>
+          <p>
+            <mat-checkbox formControlName="Others">Others</mat-checkbox>
+          </p>
+        </div>
+        <mat-form-field appearance="fill">
+          <mat-label>If others, please mention</mat-label>
+          <input matInput formControlName="other_tech"/>
+        </mat-form-field><br>
+        <label class="fs12">Are you currently on notice period?*</label><br>
+        <mat-radio-group>
+          <mat-radio-button (change)="notice($event)" value="Yes">
+            Yes
+          </mat-radio-button>
+          <mat-radio-button (change)="notice($event)" value="No">
+            No
+          </mat-radio-button>
+        </mat-radio-group><br *ngIf="!Notice">
+        <div class="two-inp" *ngIf="Notice">
+          <mat-form-field appearance="fill" class="mr24">
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Select an option</mat-label>
+            <mat-select required>
+              <mat-option *ngFor="let month of months;"value="{{month}}-month">{{month}} month</mat-option>
+            </mat-select> </mat-form-field>
+        </div>
+        <label class="fs12">Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br>
+        <mat-radio-group>
+          <mat-radio-button (change)="appeared($event)" value="Yes">
+            Yes
+          </mat-radio-button>
+          <mat-radio-button (change)="appeared($event)" value="No">
+            No
+          </mat-radio-button>
+        </mat-radio-group><br>
+        <mat-form-field appearance="fill" class="last mdc-50">
+          <mat-label>If Yes, which role did you apply for?</mat-label>
+          <input matInput formControlName="role"/>
+        </mat-form-field>
+      </div>
       <div class="center">
         <button mat-button matStepperPrevious class="btn first-btn">
           PREVIOUS

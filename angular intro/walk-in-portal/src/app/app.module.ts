@@ -2,9 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {ReactiveFormsModule,FormsModule} from '@angular/forms'
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,7 +36,13 @@ import { RHeaderComponent } from './register/r-header/r-header.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
