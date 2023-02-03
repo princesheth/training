@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [img]="img"></app-header>
 <app-r-header></app-r-header>
 <mat-stepper>
   <mat-step [stepControl]="firstFormGroup" label="Personal Information">
@@ -21,14 +21,14 @@
             <mat-label>Phone Number</mat-label>
             <span matPrefix>+ <span class="border-bottom">91</span> &nbsp;</span>
             <input type="tel" maxlength="10" matInput formControlName="phone" required /> </mat-form-field><br />
-          <input type="file" class="file" #fileInput hidden required />
+          <input type="file" class="file" formControlName="cv" (change)="cv_upload($event)" #fileInput hidden required />
           <p class="center start" (click)="fileInput.click()">
             <img src="../../assets/img/Upload_black_24dp.svg" alt="" /> UPLOAD
             RESUME
           </p>
           <mat-form-field appearance="fill">
             <mat-label>Enter Portfolio URL (if any)</mat-label>
-            <input matInput />
+            <input matInput formControlName="portfolio" />
           </mat-form-field>
           <div class="checkbox">
             <mat-label>Preferred Job Roles*</mat-label>
@@ -45,7 +45,7 @@
           <mat-form-field appearance="fill">
             <mat-label>If You Are Registering Via A Referral, Please Mention Full Name
               Of The Employee Who Referred You</mat-label>
-            <input type="text" matInput formControlName="referal" />
+            <input type="text" matInput formControlName="referal"/>
           </mat-form-field>
           <div class="update">
             <p>
@@ -55,13 +55,13 @@
         </div>
         <div class="right">
           <div class="profile"></div>
-          <input type="file" class="file" accept=".png,.jpg,.jpeg,.pdf" #userp hidden required />
+          <input type="file" class="file" formControlName="profile" accept=".png,.jpg,.jpeg,.pdf" ((change))="pic_upload($event)" #userp hidden required />
           <p (click)="userp.click()">UPLOAD DISPLAY PICTURE</p>
           <p class="instruction">Max. image size: 5 MB</p>
         </div>
       </div>
       <div class="center">
-        <button mat-button matStepperNext class="btn">NEXT</button>
+        <button mat-button matStepperNext class="btn" (click)="form1()">NEXT</button>
       </div>
     </form>
   </mat-step>
@@ -237,13 +237,13 @@
         </mat-radio-group><br *ngIf="!Notice">
         <div class="two-inp" *ngIf="Notice">
           <mat-form-field appearance="fill" class="mr24">
-            <mat-label>Choose a date</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <mat-label>If Yes, when will your notice period end?</mat-label>
+            <input matInput [matDatepicker]="picker" required>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
           <mat-form-field appearance="fill">
-            <mat-label>Select an option</mat-label>
+            <mat-label>How long is your notice period?* (Mention in months)</mat-label>
             <mat-select required>
               <mat-option *ngFor="let month of months;"value="{{month}}-month">{{month}} month</mat-option>
             </mat-select> </mat-form-field>
@@ -266,7 +266,7 @@
         <button mat-button matStepperPrevious class="btn first-btn">
           PREVIOUS
         </button>
-        <button mat-button matStepperNext class="btn">NEXT</button>
+        <button mat-button matStepperNext class="btn" (click)="form2()">NEXT</button>
       </div>
     </form>
   </mat-step>

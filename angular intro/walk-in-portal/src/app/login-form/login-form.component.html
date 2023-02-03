@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [img]="img"></app-header>
 <div class="main">
     <h3>Log in</h3>
     <div class="form">
@@ -17,7 +17,7 @@
             <input type="checkbox" name="remember"><p>Remember Me</p>
         </div>
         <div class="btn-container">
-            <button class="btn">LOG IN</button>
+            <button class="btn" (click)="auth()">LOG IN</button>
         </div>
         <p class="center">Not registered yet?</p>
         <a routerLink="register">CREATE AN ACCOUNT</a>

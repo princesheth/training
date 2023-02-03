@@ -19,6 +19,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { RHeaderComponent } from './register/r-header/r-header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RHeaderComponent } from './register/r-header/r-header.component';
     RegisterComponent,
     HeaderComponent,
     RHeaderComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
