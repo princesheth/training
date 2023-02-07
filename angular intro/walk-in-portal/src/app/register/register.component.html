@@ -1,4 +1,4 @@
-<app-header [img]="img"></app-header>
+<app-header [img]="img" [dashboard]="false"></app-header>
 <app-r-header></app-r-header>
 <mat-stepper>
   <mat-step [stepControl]="firstFormGroup" label="Personal Information">
@@ -21,7 +21,8 @@
             <mat-label>Phone Number</mat-label>
             <span matPrefix>+ <span class="border-bottom">91</span> &nbsp;</span>
             <input type="tel" maxlength="10" matInput formControlName="phone" required /> </mat-form-field><br />
-          <input type="file" class="file" formControlName="cv" (change)="cv_upload($event)" #fileInput hidden required />
+          <input type="file" class="file" formControlName="cv" (change)="cv_upload($event)" #fileInput hidden
+            required />
           <p class="center start" (click)="fileInput.click()">
             <img src="../../assets/img/Upload_black_24dp.svg" alt="" /> UPLOAD
             RESUME
@@ -45,7 +46,7 @@
           <mat-form-field appearance="fill">
             <mat-label>If You Are Registering Via A Referral, Please Mention Full Name
               Of The Employee Who Referred You</mat-label>
-            <input type="text" matInput formControlName="referal"/>
+            <input type="text" matInput formControlName="referal" />
           </mat-form-field>
           <div class="update">
             <p>
@@ -55,7 +56,8 @@
         </div>
         <div class="right">
           <div class="profile"></div>
-          <input type="file" class="file" formControlName="profile" accept=".png,.jpg,.jpeg,.pdf" ((change))="pic_upload($event)" #userp hidden required />
+          <input type="file" class="file" formControlName="profile" accept=".png,.jpg,.jpeg,.pdf"
+            (change)="pic_upload($event)" #userp hidden required />
           <p (click)="userp.click()">UPLOAD DISPLAY PICTURE</p>
           <p class="instruction">Max. image size: 5 MB</p>
         </div>
@@ -77,8 +79,8 @@
               <mat-label>Aggregate Percentage</mat-label>
               <input matInput formControlName="percentage" required /> </mat-form-field><br />
             <mat-form-field appearance="fill">
-              <mat-label>Select an option</mat-label>
-              <mat-select required>
+              <mat-label>Year of Passing</mat-label>
+              <mat-select required formControlName="YOP">
                 <mat-option value="2019">2019</mat-option>
                 <mat-option value="2020">2020</mat-option>
                 <mat-option value="2021">2021</mat-option>
@@ -88,25 +90,25 @@
             <div class="two-inp">
               <mat-form-field appearance="fill" class="mr24">
                 <mat-label>Qualification</mat-label>
-                <mat-select required>
+                <mat-select required formControlName="qualification">
                   <mat-option value="Bachelor in Technology (B.Tech)">Bachelor in Technology (B.Tech)</mat-option>
                 </mat-select>
               </mat-form-field>
               <mat-form-field appearance="fill">
                 <mat-label>Stream</mat-label>
-                <mat-select required>
+                <mat-select required formControlName="stream">
                   <mat-option value="Information Technology">Information Technology</mat-option>
                 </mat-select>
               </mat-form-field>
               <mat-form-field appearance="fill" class="mr24">
                 <mat-label>College</mat-label>
-                <mat-select required>
+                <mat-select formControlName="college">
                   <mat-option value="Pune Institute of Technology (PIT)">Pune Institute of Technology (PIT)</mat-option>
                 </mat-select>
               </mat-form-field>
               <mat-form-field appearance="fill">
                 <mat-label>If others, please enter your college name</mat-label>
-                <input matInput formControlName="other" />
+                <input matInput formControlName="other_college" />
               </mat-form-field>
             </div>
             <mat-form-field appearance="fill" class="last">
@@ -122,7 +124,7 @@
             <mat-panel-title> Professional Qualifications </mat-panel-title>
           </mat-expansion-panel-header>
           <label class="fs12">Applicant Type*</label><br>
-          <mat-radio-group>
+          <mat-radio-group formControlName="type">
             <mat-radio-button (change)="Change($event)" value="Fresher">
               Fresher
             </mat-radio-button>
@@ -153,10 +155,10 @@
         </div>
         <mat-form-field appearance="fill">
           <mat-label>If others, please mention</mat-label>
-          <input matInput formControlName="other_tech"/>
+          <input matInput formControlName="other_tech" />
         </mat-form-field><br>
         <label class="fs12">Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br>
-        <mat-radio-group>
+        <mat-radio-group formControlName="appeared" required>
           <mat-radio-button (change)="appeared($event)" value="Yes">
             Yes
           </mat-radio-button>
@@ -166,43 +168,43 @@
         </mat-radio-group><br>
         <mat-form-field appearance="fill" class="last" *ngIf="appear">
           <mat-label>If Yes, which role did you apply for?</mat-label>
-          <input matInput formControlName="role"/>
+          <input matInput formControlName="role" />
         </mat-form-field>
       </div>
       <div class="experienced" *ngIf="personal == 'Experienced'">
         <mat-form-field appearance="fill">
           <mat-label>Years of Experience</mat-label>
-          <input matInput formControlName="experience" required/>
+          <input matInput formControlName="experience" required />
         </mat-form-field><br>
         <mat-form-field appearance="fill">
           <mat-label>Current CTC (In Rupees)</mat-label>
-          <input matInput formControlName="c_CTC" required/>
+          <input matInput formControlName="c_CTC" required />
         </mat-form-field><br>
         <mat-form-field appearance="fill">
           <mat-label>Expected CTC (In Rupees)</mat-label>
-          <input matInput formControlName="e_CTC" required/>
+          <input matInput formControlName="e_CTC" required />
         </mat-form-field><br>
         <div class="checkbox">
           <mat-label>Select All The Technologies You Are Expertise In*</mat-label>
           <p>
-            <mat-checkbox formControlName="Javascript">Javascript</mat-checkbox>
+            <mat-checkbox formControlName="Javascript_e">Javascript</mat-checkbox>
           </p>
           <p>
-            <mat-checkbox formControlName="Angular_JS">Angular JS</mat-checkbox>
+            <mat-checkbox formControlName="Angular_JS_e">Angular JS</mat-checkbox>
           </p>
           <p>
-            <mat-checkbox formControlName="React">React</mat-checkbox>
+            <mat-checkbox formControlName="React_e">React</mat-checkbox>
           </p>
           <p>
-            <mat-checkbox formControlName="Node_JS">Node JS</mat-checkbox>
+            <mat-checkbox formControlName="Node_JS_e">Node JS</mat-checkbox>
           </p>
           <p>
-            <mat-checkbox formControlName="Others">Others</mat-checkbox>
+            <mat-checkbox formControlName="Others_e">Others</mat-checkbox>
           </p>
         </div>
         <mat-form-field appearance="fill">
           <mat-label>If others, please mention</mat-label>
-          <input matInput formControlName="other_tech"/>
+          <input matInput formControlName="other_tech_e" />
         </mat-form-field><br>
         <div class="checkbox">
           <mat-label>Select All The Technologies You Are Familiar In</mat-label>
@@ -224,10 +226,10 @@
         </div>
         <mat-form-field appearance="fill">
           <mat-label>If others, please mention</mat-label>
-          <input matInput formControlName="other_tech"/>
+          <input matInput formControlName="other_tech" />
         </mat-form-field><br>
         <label class="fs12">Are you currently on notice period?*</label><br>
-        <mat-radio-group>
+        <mat-radio-group formControlName="notice">
           <mat-radio-button (change)="notice($event)" value="Yes">
             Yes
           </mat-radio-button>
@@ -238,18 +240,18 @@
         <div class="two-inp" *ngIf="Notice">
           <mat-form-field appearance="fill" class="mr24">
             <mat-label>If Yes, when will your notice period end?</mat-label>
-            <input matInput [matDatepicker]="picker" required>
+            <input matInput [matDatepicker]="picker" required formControlName="notice_end">
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
           <mat-form-field appearance="fill">
             <mat-label>How long is your notice period?* (Mention in months)</mat-label>
-            <mat-select required>
-              <mat-option *ngFor="let month of months;"value="{{month}}-month">{{month}} month</mat-option>
+            <mat-select required formControlName="notice_length">
+              <mat-option *ngFor="let month of months;" value="{{month}}-month">{{month}} month</mat-option>
             </mat-select> </mat-form-field>
         </div>
         <label class="fs12">Have You Appeared For Any Test By Zeus in the past 12 months?*</label><br>
-        <mat-radio-group>
+        <mat-radio-group formControlName="appeared" required>
           <mat-radio-button (change)="appeared($event)" value="Yes">
             Yes
           </mat-radio-button>
@@ -259,7 +261,7 @@
         </mat-radio-group><br>
         <mat-form-field appearance="fill" class="last mdc-50">
           <mat-label>If Yes, which role did you apply for?</mat-label>
-          <input matInput formControlName="role"/>
+          <input matInput formControlName="role" />
         </mat-form-field>
       </div>
       <div class="center">
@@ -272,7 +274,114 @@
   </mat-step>
   <mat-step [stepControl]="thirdFormGroup" label="Review and Proceed">
     <form [formGroup]="thirdFormGroup">
-      <p>You are now done.</p>
+      <p>Personal Information</p>
+      <div class="p_info">
+        <div class="left">
+          <p class="label">First name</p>
+          <p class="content">{{personal_info.firstname || "-"}}</p>
+          <p class="label">Last name</p>
+          <p class="content">{{personal_info.lastname || "-"}}</p>
+          <p class="label">Email</p>
+          <p class="content">{{personal_info.email || "-"}}</p>
+          <p class="label">Phone Number</p>
+          <p class="content">+ 91 {{personal_info.phoneno || "-"}}</p>
+          <p class="center start" (click)="fileInput.click()">
+            <img src="../../assets/img/Upload_black_24dp.svg" alt="" /> UPLOAD
+            RESUME {{personal_info.cv || "-"}}
+          </p>
+          <p class="label">Enter Portfolio URL (if any)</p>
+          <p class="content">{{personal_info.portfolio || "-"}}</p>
+          <p class="label">Preferred Job Roles</p>
+          <p class="content" *ngFor="let role of personal_info.preferedjob">{{role || "-"}}</p>
+          <p class="label">If You Are Registering Via A Referral, Please Mention Full Name Of The Employee Who Referred
+            You</p>
+          <p class="content">{{personal_info.referer || "-"}}</p>
+          <div class="update">
+            <p>
+              <mat-checkbox [checked]="personal_info.emailupdates">Send me job related updates via mail</mat-checkbox>
+            </p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="profile">
+          </div>
+        </div>
+      </div>
+      <p class="quali">Qualifications</p>
+      <div class="heading">
+        <p>Educational Qualifications</p>
+      </div>
+      <div class="q_info">
+        <p class="label">Aggregate Percentage</p>
+        <p class="content">{{e_quali.percentage || "-"}}</p>
+        <p class="label">Year of Passing</p>
+        <p class="content">{{e_quali.yop || "-"}}</p>
+        <div class="two">
+          <div class="left">
+            <p class="label">Qualification</p>
+            <p class="content">{{e_quali.Qualification || "-"}}</p>
+            <p class="label">College</p>
+            <p class="content">{{e_quali.college || "-"}}</p>
+          </div>
+          <div class="right">
+            <p class="label">Stream</p>
+            <p class="content">{{e_quali.stream || "-"}}</p>
+            <p class="label">If others, please enter your college name</p>
+            <p class="content">{{e_quali.other_college || "-"}}</p>
+          </div>
+        </div>
+        <p class="label">Where is your college located?</p>
+        <p class="content last">{{e_quali.college_location || "-"}}</p>
+      </div>
+      <div class="heading">
+        <p>Professional Qualifications</p>
+      </div>
+      <div class="a_type">
+        <p class="label">Applicant Type</p>
+        <p class="content">{{e_quali.applicant_type || "-"}}</p>
+      </div>
+      <div class="e_quali" *ngIf="e_quali.applicant_type == 'Experienced'">
+        <p class="label">Years of Experience</p>
+        <p class="content">{{experienced_q.experience || "-"}}</p>
+        <p class="label">Current CTC (In Rupees)</p>
+        <p class="content">{{experienced_q.c_ctc || "-"}}</p>
+        <p class="label">Expected CTC (In Rupees)</p>
+        <p class="content">{{experienced_q.e_ctc || "-"}}</p>
+        <p class="label">Select All The Technologies You Expertise In</p>
+        <p class="content" *ngFor="let e of experienced_q.techs_e">{{e || "-"}}</p>
+        <p class="label">If others, please mention</p>
+        <p class="content">{{experienced_q.other_tech_e || "-"}}</p>
+        <p class="label">Select All The Technologies You are familiar In</p>
+        <p class="content" *ngFor="let e of experienced_q.techs">{{e || "-"}}</p>
+        <p class="label">If others, please mention</p>
+        <p class="content">{{experienced_q.other_tech || "-"}}</p>
+        <p class="label">Are you currently on notice period?</p>
+        <p class="content">{{experienced_q.notice || "-"}}</p>
+        <div class="two">
+          <div class="left">
+            <p class="label">If Yes, when will your notice period end?</p>
+            <p class="content">{{experienced_q.notice_end || "-"}}</p>
+          </div>
+          <div class="right">
+            <p class="label">How long is your notice period? (Mention in months)</p>
+            <p class="content">{{experienced_q.notice_length || "-"}}</p>
+          </div>
+        </div>
+        <p class="label">Have You Appeared For Any Test By Zeus in the past 12 months?</p>
+        <p class="content">{{experienced_q.appeared || "-"}}</p>
+        <p class="label">If Yes, which role did you apply for?</p>
+        <p class="content last">{{experienced_q.role || "-"}}</p>
+      </div>
+      <div class="f_quali" *ngIf="e_quali.applicant_type == 'Fresher'">
+        <p class="label">Select All The Technologies You are familiar In</p>
+        <p class="content" *ngFor="let e of fresher_q.techs">{{e || "-"}}</p>
+        <p class="label">If others, please mention</p>
+        <p class="content">{{fresher_q.other_tech || "-"}}</p>
+        <p class="label">Have You Appeared For Any Test By Zeus in the past 12 months?</p>
+        <p class="content">{{fresher_q.appeared || "-"}}</p>
+        <p class="label">If Yes, which role did you apply for?</p>
+        <p class="content last">{{fresher_q.role || "-"}}</p>
+      </div>
       <div class="center">
         <button mat-button matStepperPrevious class="btn">PREVIOUS</button>
       </div>
