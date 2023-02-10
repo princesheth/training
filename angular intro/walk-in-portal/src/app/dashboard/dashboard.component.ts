@@ -4,7 +4,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  encapsulation:ViewEncapsulation.None,
 })
 export class DashboardComponent {
   img:string="../assets/img/Zeus-LMS-logo.svg";

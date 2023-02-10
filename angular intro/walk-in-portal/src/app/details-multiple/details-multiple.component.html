@@ -3,14 +3,55 @@
   <div class="card">
     <div class="heading">Walk In for Multiple Job Roles <button class="btn">Apply</button></div>
     <p class="title">Date & Time :</p>
-    <div class="date">03-Jul-2021 to 04-Jul-2021 <span class="location"><i class="fa-solid fa-location-dot"></i> Mumbai</span></div>
+    <div class="date">03-Jul-2021 to 04-Jul-2021 <span class="location"><i class="fa-solid fa-location-dot"></i>
+        Mumbai</span></div>
     <p class="title">Job Roles:</p>
     <div class="job">
-      <div class="img"><img src="../../assets/img/Instructional Designer.svg"> </div > Instructional Designer<div class="border"></div>
-      <div class="img"><img src="../../assets/img/Software Engineer.svg"> </div > Software Engineer<div class="border"></div>
-      <div class="img"><img src="../../assets/img/Software Quality Engineer.svg"> </div > Software Quality Engineer
+      <div class="img"><img src="../../assets/img/Instructional Designer.svg"></div>Instructional Designer<div
+        class="border"></div>
+      <div class="img"><img src="../../assets/img/Software Engineer.svg"></div>Software Engineer<div class="border">
+      </div>
+      <div class="img"><img src="../../assets/img/Software Quality Engineer.svg"></div>Software Quality Engineer
     </div>
   </div>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Pre-requisites & Application Process
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <p>I'm visible because I am open</p>
+  </mat-expansion-panel>
+  <div class="preference">
+    <form [formGroup]="firstFormGroup">
+      <p class="p-heading">
+        Time Slots & Preferences
+      </p>
+      <p class="title">Select a Time Slot :</p>
+      <mat-radio-group formControlName="type">
+        <mat-radio-button (change)="Change($event)" value="Fresher">
+          9:00 AM to 11:00 AM
+        </mat-radio-button>
+        <mat-radio-button (change)="Change($event)" value="Experienced">
+          1:00 PM to 3:00 PM
+        </mat-radio-button>
+      </mat-radio-group>
+      <div class="checkbox">
+        <mat-label>Select Your Preference :</mat-label>
+        <p>
+          <mat-checkbox formControlName="Instructional_Designer">Instructional Designer</mat-checkbox>
+        </p>
+        <p>
+          <mat-checkbox formControlName="Software_Engineer">Software Engineer</mat-checkbox>
+        </p>
+        <p>
+          <mat-checkbox formControlName="Software_Quality_Engineer">Software Quality Engineer</mat-checkbox>
+        </p>
+      </div>
+      <input type="file" class="file" formControlName="cv" (change)="cv_upload($event)" #fileInput hidden required />
+        <p class="center start" (click)="fileInput.click()">
+          <img src="../../assets/img/Upload_black_24dp.svg" alt="" /> UPLOAD UPDATED RESUME
+        </p>
+    </form>
+  </div>
 </div>
-
-

@@ -6,7 +6,6 @@ import { login } from '../register';
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
-  encapsulation:ViewEncapsulation.None,
 })
 export class LoginFormComponent {
   login:login;
