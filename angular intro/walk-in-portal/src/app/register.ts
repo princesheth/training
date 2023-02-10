@@ -42,3 +42,20 @@ export class experienced_qualification{
     appeared:string="";
     role:string="";
 }
+
+
+export class login{
+    email:string;
+    password:string;
+    remember:string;
+}
+
+export class job_card{
+    name:string;
+    date_from:Date;
+    date_to:Date;
+    location:string;
+    job_roles:string[];
+    oportunity_for:string;
+    expires_in:string;
+}

@@ -5,7 +5,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,6 +19,10 @@ import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { RHeaderComponent } from './register/r-header/r-header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CardComponent } from './dashboard/card/card.component';
+import { DetailsDesignerComponent } from './details-designer/details-designer.component';
+import { DetailsMultipleComponent } from './details-multiple/details-multiple.component';
+import { DetailsDevelopmentComponent } from './details-development/details-development.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeaderComponent,
     RHeaderComponent,
     DashboardComponent,
+    CardComponent,
+    DetailsDesignerComponent,
+    DetailsMultipleComponent,
+    DetailsDevelopmentComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +50,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatExpansionModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatMomentDateModule,
     MatRadioModule,
   ],
   providers: [],

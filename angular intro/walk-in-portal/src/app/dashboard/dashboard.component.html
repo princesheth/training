@@ -1,1 +1,4 @@
 <app-header [img]="img" [dashboard]="true"></app-header>
+<div class="cards">
+  <app-card *ngFor="let card of cards" [card]="card"></app-card>
+</div>

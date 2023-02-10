@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { edu_qualification, experienced_qualification, fresher_qualification, Personal_info } from '../register';
 
@@ -6,6 +6,7 @@ import { edu_qualification, experienced_qualification, fresher_qualification, Pe
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
+  encapsulation:ViewEncapsulation.None,
   providers: [],
 })
 
@@ -94,7 +95,7 @@ export class RegisterComponent {
     Others : false,
     Others_e : false
     })
-    
+
   }
 
 

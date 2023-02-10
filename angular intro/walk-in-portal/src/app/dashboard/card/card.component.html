@@ -1,0 +1,10 @@
+<div class="card">
+  <p class="heading">{{card.name}}</p>
+  <p class="title">Date & Time :</p>
+  <div class="date">{{card.date_from.getDate()}}-{{card.date_from.getMonth()}}-{{card.date_from.getFullYear()}} to {{card.date_to.getDate()}}-{{card.date_to.getMonth()}}-{{card.date_to.getFullYear()}}  <span class="location"><i class="fa-solid fa-location-dot"></i> {{card.location}}</span></div>
+  <p class="title">Job Roles:</p>
+  <div class="job"><div *ngFor="let job of card.job_roles; let i=index"><div class="img"><img src="../../../assets/img/{{job}}.svg"> </div >{{job}} <div class="border" *ngIf="i<card.job_roles.length-1"></div></div></div>
+  <div class="opportunity" *ngIf="card.opportunity">Internship Opportunity for {{card.opportunity}} Students</div>
+  <div class="btn-container"><button class="btn" (click)="next(card.route)">VIEW MORE DETAILS</button></div>
+  <div class="expire" *ngIf="card.expires_in">Expires in {{card.expires_in}}</div>
+</div>
